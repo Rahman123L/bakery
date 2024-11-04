@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js" defer></script>
+
+    <script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#FF5C00',
+                    secondary: '',
+                    tertiary: '',
+                },
+                boxShadow: {
+                    middle: '0px 0px 40px 1px rgba(0, 0, 0, 0.25)',
+                },
+                keyframes: {
+                    fadeIn: {
+                        '0%': { opacity: 0 },
+                        '100%': { opacity: 1 },
+                    },
+                },
+                animation: {
+                    fadeIn: "fadeIn 2s forwards",
+                },
+            },
+        },
+    };
+    </script>
+
+</head>
+<body class="bg-[#FBFBFB]">
+
+    <nav class="w-[90%] mx-auto py-6 px-4">
+        <div class="flex justify-between items-center gap-2">
+            <h1 class="text-lg md:text-xl text-black font-extrabold">Bakery</h1>
+        </div>
+    </nav>
+
+    <header class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="order-2 md:order-1 flex items-center">
+            <div class="space-y-4">
+                <div class="md:space-y-5">
+                    <h1 class="text-xl md:text-8xl text-black font-extrabold">Bakery</h1>
+                    <p class="w-full md:w-[80%] text-xs md:text-base text-gray-600 font-medium">Bakery dibuat dengan bahan dasar seperti tepung, gula, telur, mentega, dan ragi. bisa menikmati bakery bersama dengan minuman seperti kopi atau teh.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <button class="flex items-center gap-2 bg-primary py-1.5 px-4 rounded-md">
+                        <svg class="w-4 md:w-5 stroke-white stroke-[1.5] transition-colors duration-300 group-hover:stroke-primary group-focus:stroke-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.864 16.4552C4.40967 18.6379 4.68251 19.7292 5.49629 20.3646C6.31008 21 7.435 21 9.68486 21H14.3155C16.5654 21 17.6903 21 18.5041 20.3646C19.3179 19.7292 19.5907 18.6379 20.1364 16.4552C20.9943 13.0234 21.4233 11.3075 20.5225 10.1538C19.6217 9 17.853 9 14.3155 9H9.68486C6.14745 9 4.37875 9 3.47791 10.1538C2.94912 10.831 2.87855 11.702 3.08398 13" stroke-linecap="round"/>
+                            <path d="M19.5 9.5L18.7896 6.89465C18.5157 5.89005 18.3787 5.38775 18.0978 5.00946C17.818 4.63273 17.4378 4.34234 17.0008 4.17152C16.5619 4 16.0413 4 15 4M4.5 9.5L5.2104 6.89465C5.48432 5.89005 5.62128 5.38775 5.90221 5.00946C6.18199 4.63273 6.56216 4.34234 6.99922 4.17152C7.43808 4 7.95872 4 9 4"/>
+                            <path d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4C15 4.55228 14.5523 5 14 5H10C9.44772 5 9 4.55228 9 4Z"/>
+                        </svg>
+                        <h1 class="text-xs md:text-sm text-white font-medium">Add To Cart</h1>
+                    </button>
+                    <button class="flex items-center gap-2 border border-black py-1.5 px-4 rounded-md">
+                        <svg class="w-4 md:w-5 stroke-black stroke-[1.5] transition-colors duration-300 group-hover:stroke-primary group-focus:stroke-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.8876 9.9348C14.9625 10.8117 15.5 11.2501 15.5 12C15.5 12.7499 14.9625 13.1883 13.8876 14.0652C13.5909 14.3073 13.2966 14.5352 13.0261 14.7251C12.7888 14.8917 12.5201 15.064 12.2419 15.2332C11.1695 15.8853 10.6333 16.2114 10.1524 15.8504C9.6715 15.4894 9.62779 14.7336 9.54038 13.2222C9.51566 12.7947 9.5 12.3757 9.5 12C9.5 11.6243 9.51566 11.2053 9.54038 10.7778C9.62779 9.26636 9.6715 8.51061 10.1524 8.1496C10.6333 7.78859 11.1695 8.11466 12.2419 8.76679C12.5201 8.93597 12.7888 9.10831 13.0261 9.27492C13.2966 9.46483 13.5909 9.69274 13.8876 9.9348Z"/>
+                            <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke-linecap="round"/>
+                        </svg>
+                        <h1 class="text-xs md:text-sm text-black font-medium">Watch Intro</h1>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 md:order-2">
+            <img class="w-[80%] mx-auto object-contain" src="images/hero.png">
+        </div>
+    </header>
+
+    <main class="py-10 space-y-10 md:space-y-20">
+        <div class="w-[80%] mx-auto md:mx-0">
+            <div class="w-full col-span-1 md:flex items-center space-y-2 md:space-y-0">
+                <div class="md:relative md:left-24 bottom-5">
+                    <h1 class="md:-rotate-90 w-full text-base md:text-5xl">Explore Our Breads</h1>
+                </div>
+                <img class="w-[30%] object-contain" src="images/card1.png">
+                <div class="md:relative md:right-5 md:bg-white md:p-10 md:shadow-md">
+                    <div class="md:w-72 space-y-4">
+                        <div class="">
+                            <h1 class="text-xs md:text-2xl text-black font-bold">Artisan Breads</h1>
+                            <p class="w-full text-xs md:text-sm text-gray-700 font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio enim voluptas maiores hic atque.</p>
+                        </div>
+                        <button class="flex items-center gap-2 bg-primary py-1.5 px-4 rounded-md">
+                            <h1 class="text-xs md:text-sm text-white font-medium">Add To Cart</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:block w-[80%] mx-auto">
+            <div class="w-full col-span-1 md:flex items-center space-y-2 md:space-y-0">
+                <div class="md:relative md:left-5 md:bg-white md:p-10 md:shadow-md">
+                    <div class="md:w-72 space-y-4">
+                        <div class="">
+                            <h1 class="text-xs md:text-2xl text-black font-bold">Decadent Croissant</h1>
+                            <p class="w-full text-xs md:text-sm text-gray-700 font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio enim voluptas maiores hic atque.</p>
+                        </div>
+                        <button class="flex items-center gap-2 bg-primary py-1.5 px-4 rounded-md">
+                            <h1 class="text-xs md:text-sm text-white font-medium">Add To Cart</h1>
+                        </button>
+                    </div>
+                </div>
+                <img class="w-[30%] object-contain" src="images/card2.png">
+                <div class="md:relative right-24 bottom-5">
+                    <h1 class="md:-rotate-90 w-full text-base md:text-5xl">Explore Our Croissant</h1>
+                </div>
+            </div>
+        </div>
+        <div class="w-[80%] mx-auto md:mx-0">
+            <div class="w-full col-span-1 md:flex items-center space-y-2 md:space-y-0">
+                <div class="md:relative md:left-24 bottom-5">
+                    <h1 class="md:-rotate-90 w-full text-base md:text-5xl">Explore Our Pastry</h1>
+                </div>
+                <img class="w-[30%] object-contain" src="images/card3.png">
+                <div class="md:relative md:right-5 md:bg-white md:p-10 md:shadow-md">
+                    <div class="md:w-72 space-y-4">
+                        <div class="">
+                            <h1 class="text-xs md:text-2xl text-black font-bold">Custom Pastry</h1>
+                            <p class="w-full text-xs md:text-sm text-gray-700 font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio enim voluptas maiores hic atque.</p>
+                        </div>
+                        <button class="flex items-center gap-2 bg-primary py-1.5 px-4 rounded-md">
+                            <h1 class="text-xs md:text-sm text-white font-medium">Add To Cart</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
+        <div class="p-5 space-y-8">
+            <div class="space-y-3">
+                <h1 class="text-base md:text-3xl text-black font-semibold">About Us</h1>
+                <p class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias debitis expedita culpa hic autem reiciendis veniam suscipit dicta error fuga voluptate aspernatur exercitationem consectetur quaerat cupiditate incidunt dolores atque dignissimos non necessitatibus, impedit animi quo neque distinctio. Necessitatibus, mollitia perspiciatis.</p>
+            </div>
+            <div class="space-y-3">
+                <h1 class="text-base md:text-3xl text-black font-semibold">Our Cretivity</h1>
+                <p class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias debitis expedita culpa hic autem reiciendis veniam suscipit dicta error fuga voluptate aspernatur exercitationem consectetur quaerat cupiditate incidunt dolores atque dignissimos non necessitatibus, impedit animi quo neque distinctio. Necessitatibus, mollitia perspiciatis.</p>
+            </div>
+        </div>
+        <img class="w-full h-full object-contain" src="images/bg.png">
+        <div class="p-5 space-y-8">
+            <div class="space-y-3">
+                <h1 class="text-base md:text-3xl text-black font-semibold">Quality Ingredients</h1>
+                <p class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias debitis expedita culpa hic autem reiciendis veniam suscipit dicta error fuga voluptate aspernatur exercitationem consectetur quaerat cupiditate incidunt dolores atque dignissimos non necessitatibus, impedit animi quo neque distinctio. Necessitatibus, mollitia perspiciatis.</p>
+            </div>
+            <div class="space-y-3">
+                <h1 class="text-base md:text-3xl text-black font-semibold">Our Community</h1>
+                <p class="text-xs md:text-sm text-gray-500 font-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias debitis expedita culpa hic autem reiciendis veniam suscipit dicta error fuga voluptate aspernatur exercitationem consectetur quaerat cupiditate incidunt dolores atque dignissimos non necessitatibus, impedit animi quo neque distinctio. Necessitatibus, mollitia perspiciatis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-[60%] mx-auto grid grid-cols-1 md:grid-cols-3">
+        <div class=""></div>
+    </section>
+</body>
+</html>
